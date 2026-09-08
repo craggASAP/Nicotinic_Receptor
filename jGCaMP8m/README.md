@@ -2,7 +2,7 @@ jGCaMP8m sensor imaging in ex vivo mouse brain slices
 
 **Installation:**
 
-To install MATLAB you require a paid subscription from MATLAB.
+To install MATLAB on a PC you require a paid subscription from MATLAB.
 
 
 **Files:**
