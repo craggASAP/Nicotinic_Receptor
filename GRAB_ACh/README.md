@@ -3,7 +3,8 @@ GRAB ACh sensor imaging in ex vivo mouse brain slices
 
 **Installation:**
 
-To install MATLAB on a PC you require a paid subscription from MATLAB.
+To install MATLAB on a PC (Windows 10 or 11) you require a paid subscription from MATLAB.
+MATLAB version used was MATLAB R2024a.
 
 
 **Files:**
