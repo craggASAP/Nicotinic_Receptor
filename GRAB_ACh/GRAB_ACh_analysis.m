@@ -4,7 +4,7 @@
 %  Lucille Duquenoy 03/05/24 
 % 
 
-% input A with a colume of frame number (Colume 1), and raw transients in the next columes
+% input A with first a column with the frame number (Column 1), and then the raw fluorescence transients in the next columes
 
 deltaF_all=zeros(size(A,1),size(A,2)-1);
 
