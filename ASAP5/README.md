@@ -1,12 +1,12 @@
 ASAP5 voltage sensor imaging in ex vivo mouse brain slices
 
-Installation:
+**Installation:**
 
 To install MATLAB you require a paid subscription from MATLAB.
 You can isntall python at this link: https://www.python.org/downloads/
 
 
-Files: 
+**Files:**
 
 The following file is included in this folder:
 
@@ -14,6 +14,20 @@ Voltage_sensor_analysis.m: Script to process (correct for bleaching, flip and ex
 
 Voltage_sensor_analysis_for_2p_different_IPI.m: Script to process (correct for bleaching, flip and extract dF/F0) of fluorescence changes of the ASAP5 sensor in response to 2 pulses of electrical stimulations at different interpuls intervals.
 
-Voltage_sensor_spontaneous_nAChR_event_detection.ipynb: Script to detect and extract information (amplitude, duratio, etc...) about spontaneous nAChR events 
+Voltage_sensor_spontaneous_nAChR_event_detection.ipynb: Script to detect and extract information (amplitude, duration, etc...) about spontaneous nAChR events 
 
 Voltage_Sensor_analysis_nAChR_mediated_depolarisation_metrics.ipynb: Script to extract metrics of nAChR-mediated depolarisation (extracted by subtraction of responses to 1 electrical pulse in and out nAChR blocker DHBE)
+
+
+**Instructions:**
+
+Before using the the Voltage_sensor_analysis.m and Voltage_sensor_analysis_for_2p_different_IPI.m codes you need to create, in MatLab, two tables as following:
+
+an input table called A with: Column 1 = with the frame number Column 2 until the end of experiment = raw fluorescence transients extracted from imageJ (1 column per recording)
+
+AND
+
+an input table called "stims" (1 line only) with: Column 1 = 0 Column 2 until the end of experiment= the stimulation done for the corresponding fluoresence transients (1 column per recording)
+
+
+For the Voltage_sensor_spontaneous_nAChR_event_detection.ipynb and Voltage_Sensor_analysis_nAChR_mediated_depolarisation_metrics.ipynb, data will be extracted directly from the raw excel files organised with culumn headers as recording number & electrical stimulation applied for that recording, with below the raw fluorescence extracted from ImageJ.
