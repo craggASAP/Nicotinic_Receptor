@@ -2,7 +2,7 @@ ASAP5 voltage sensor imaging in ex vivo mouse brain slices
 
 **Installation:**
 
-To install MATLAB you require a paid subscription from MATLAB for both PC and MacOS machine, the matlab code in this folder has been tested on a PC machines.
+To install MATLAB you require a paid subscription from MATLAB for both PC (Windows 10 or 11) and MacOS machine, the matlab code in this folder has been tested on a PC machines (Windows 10 or 11) and with MATLAB R2024a.
 You can isntall python at this link: https://www.python.org/downloads/, the python code in this folder as been tested on MacOS machine.
 
 
