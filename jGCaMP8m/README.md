@@ -1,27 +1,23 @@
-jGCaMP8m sensor imaging in ex vivo mouse brain slices
+### jGCaMP8m sensor imaging in ex vivo mouse brain slices
 
-**Installation:**
+## Installation
 
-To install MATLAB on a PC (Windows 10 or 11) you require a paid subscription from MATLAB.
-MATLAB version used was MATLAB R2024a.
+To install MATLAB on a PC (Windows 10 or 11) you require a paid a MATLAB license or subscription. MATLAB version used was MATLAB R2024a.
 
-**Files:**
+## Files
 
 The following file is included in this folder:
 
-jGCaMP8m_analysis.m: Script to process (correct for bleaching and extract dF/F0) of fluorescence changes of the jGCaMP8m sensor in response to electrical stimulations.
+**jGCaMP8m_analysis.m**: Script to process (correct for bleaching and extract dF/F0) of fluorescence changes of the jGCaMP8m sensor in response to electrical stimulations.
 
-
-**Instructions:**
+## Instructions
 
 Before using the code you need to create two tables as following:
 
-an input table called A with:
-Column 1 = with the frame number 
-Column 2 until the end of experiment = raw fluorescence transients extracted from imageJ (1 column per recording)
+1) an input table called A with:
+    - Column 1 = with the frame number 
+    - Column 2 until the end of experiment = raw fluorescence transients extracted from imageJ (1 column per recording)
 
-AND
-
-an input table called "stims" (1 line only) with:
-Column 1 = 0 
-Column 2 until the end of experiment= the stimulation done for the corresponding fluoresence transients (1 column per recording)
+2) an input table called "stims" (1 line only) with:
+    - Column 1 = 0 
+    - Column 2 until the end of experiment= the stimulation done for the corresponding fluoresence transients (1 column per recording)
