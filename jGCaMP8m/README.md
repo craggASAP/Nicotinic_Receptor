@@ -18,10 +18,10 @@ Before using the code you need to create two tables as following:
 
 an input table called A with:
 Column 1 = with the frame number 
-Column 2 until the end= raw fluorescence transients extracted from imageJ
+Column 2 until the end of experiment = raw fluorescence transients extracted from imageJ (1 column per recording)
 
 AND
 
 an input table called "stims" (1 line only) with:
 Column 1 = 0 
-Column 2 until the end = the stim done for the corresponding fluoresence transients
+Column 2 until the end of experiment= the stimulation done for the corresponding fluoresence transients (1 column per recording)
