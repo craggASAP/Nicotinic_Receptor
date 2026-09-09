@@ -1,4 +1,4 @@
-### jGCaMP8m sensor imaging in ex vivo mouse brain slices
+### jGCaMP8m sensor imaging in *ex vivo* mouse brain slices
 
 ## Installation
 
