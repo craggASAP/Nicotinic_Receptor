@@ -1,8 +1,6 @@
 %%%%%%%%%%%%%%%%%%% Imaging data analysis %%%%%%%%%%%%%%%%%%%%
 % !! Remember to modify parameters depending on acquisition protocol and stim protocol!!
 % (exposure / time of stim / etc..)
-%  Lucille Duquenoy 28/08/24 - added 2p100Hz, 3p100Hz 
-
 
 % Before using the code you need to create two tables as following:
 
@@ -137,28 +135,6 @@ for i=2:size(A,2); % size(A,2) is the amount of transients you have in your expe
         third_spike_F0=mean(deltaF_over_F0_percent(t3-1));
         fourth_spike_F0=mean(deltaF_over_F0_percent(t4-1));
         end 
-        
-
-        % % for Beth:
-        % if stims (:,i) == 210; % 2p 10ms IPI, 2p100Hz
-        % t2= 845; % 1st pulse is at 1.4s which is 840 frames, and 100Hz=every 0.01s, so the second pulse is at 1.41*599.52fps=845.52 frames
-        % second_spike_F0=mean(deltaF_over_F0_percent(t2-1)); % only using 1 frame as baseline for 100 Hz stims
-        % end
-        % 
-        % if stims (:,i) == 240; % 2p 40ms IPI, 2p25Hz
-        % t2= 863; % 1st pulse is at 1.4s which is 840 frames, and 25Hz=every 0.04s, so the second pulse is at 1.44*599.52fps=863.3 frames
-        % second_spike_F0=mean(deltaF_over_F0_percent(t2-2:t2-1));
-        % end
-        % 
-        % if stims (:,i) == 2100; % 2p 100ms IPI, 2p10Hz
-        % t2= 899; % 1st pulse is at 1.4s which is 840 frames, and 10Hz=every 0.1s, so the second pulse is at 1.50s*599.52fps=899.28 frames
-        % second_spike_F0=mean(deltaF_over_F0_percent(t2-2:t2-1));
-        % end
-        % 
-        % if stims(:,i) == 2200; % 2p 200ms IPI, 2p5Hz
-        % t2= 959; % 1st pulse is at 1.4s which is 840 frames, and 5Hz=every 0.2s, so the second pulse is at 1.60s*599.52fps=95.23 frames
-        % second_spike_F0=mean(deltaF_over_F0_percent(t2-2:t2-1));
-        % end 
 
         
         % 2nd spike
@@ -179,8 +155,6 @@ for i=2:size(A,2); % size(A,2) is the amount of transients you have in your expe
         continue
         end
         
-        % For Beth : please put the next section in %comment since you don't use 4p stims
-
         % 3rd spike
         
         third_spike_absolute_heigth=max(deltaF_over_F0_percent(t3-1:t3+3)); % taking a narrow window around stim 
@@ -244,12 +218,8 @@ for i=2:size(A,2); % size(A,2) is the amount of transients you have in your expe
     
 end
 
+%putput to copy paste in Excel:
 
-
-
-%to copy paste in Excel:
-
-% For Lulu:
 SPIKE_absolute_heigth_all=cat(1,first_spike_absolute_heigth_all,second_spike_absolute_heigth_all,third_spike_absolute_heigth_all,fourth_spike_absolute_heigth_all);
 SPIKE_rebaselined_heigth_all=cat(1,first_spike_rebaselined_heigth_all,second_spike_rebaselined_heigth_all,third_spike_rebaselined_heigth_all,fourth_spike_rebaselined_heigth_all);
 SPIKE_AUC_all=cat(1,first_spike_AUC_all,second_spike_AUC_all,third_spike_AUC_all,fourth_spike_AUC_all);
@@ -260,21 +230,3 @@ TO_EXPORT_full_traces=cat(2,frame_number*exposure,deltaF_over_F0_percent_all);
 TO_EXPORT_spike_traces=cat(1,first_spike_trace_all,zeros(1,total_number_of_stims),second_spike_trace_all,zeros(1,total_number_of_stims),third_spike_trace_all,zeros(1,total_number_of_stims),fourth_spike_trace_all);
 TO_EXPORT_spike_abs_rebas_height_AUC_F0=cat(1,SPIKE_absolute_heigth_all,zeros(1,total_number_of_stims),SPIKE_rebaselined_heigth_all,zeros(1,total_number_of_stims),SPIKE_AUC_all,zeros(1,total_number_of_stims),SPIKE_F0_all);
 
-
-% % For Beth:
-% % total_AUC_all
-% deltaF_over_F0_percent_all
-% F0_all
-% SPIKE_absolute_heigth_all=cat(1,first_spike_absolute_heigth_all,second_spike_absolute_heigth_all);
-% SPIKE_rebaselined_heigth_all=cat(1,first_spike_rebaselined_heigth_all,second_spike_rebaselined_heigth_all);
-% SPIKE_AUC_all=cat(1,first_spike_AUC_all,second_spike_AUC_all);
-% SPIKE_F0_all=cat(1,first_spike_F0_all,second_spike_F0_all);
-% 
-% TO_EXPORT_general_AUC_F0=cat(1,total_AUC_all,F0_all)
-% TO_EXPORT_full_traces=cat(2,frame_number*exposure,deltaF_over_F0_percent_all)
-% TO_EXPORT_spike_traces=cat(1,first_spike_trace_all,zeros(1,total_number_of_stims),second_spike_trace_all,zeros(1,total_number_of_stims))
-% TO_EXPORT_spike_abs_rebas_height_AUC_F0=cat(1,SPIKE_absolute_heigth_all,zeros(1,total_number_of_stims),SPIKE_rebaselined_heigth_all,zeros(1,total_number_of_stims),SPIKE_AUC_all,zeros(1,total_number_of_stims),SPIKE_F0_all)
-% 
-% 
-% 
-% 
