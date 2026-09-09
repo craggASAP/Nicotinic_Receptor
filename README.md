@@ -9,7 +9,8 @@
 
 ------------------
 ## Project Overview
-This repository contains scripts used to (1) analyse fluorescence changes of the ASAP5 voltage sensor in response to electrical stimulations; (2) measure changes in fluorescence after each stimulation in *ex vivo* mouse brain slices expressing GRAB-ACh sensor, and (3) determine fluorescence changes of the jGCaMP8m calcium sensor in response to electrical stimulations. These scripts were custom-written by Lucille Duquenoy and Mark Conway and used in the study "Axonal nicotinic receptor activation attenuates dopamine axon spiking and dopamine release via Na+-channel inactivation".
+This repository contains scripts used to (1) analyse fluorescence changes of the ASAP5 voltage sensor in response to electrical stimulations; (2) analyse fluorescence changes of GRAB-ACh sensor in response to electrical stimulation, and (3) analyse fluorescence changes of the jGCaMP8m calcium sensor in response to electrical stimulations. The output of these codes are data tables that were then further analysed using Excel and GraphPad Prism. 
+These scripts were custom-written by Lucille Duquenoy and Mark Conway and used in the study "Axonal nicotinic receptor activation attenuates dopamine axon spiking and dopamine release via Na+-channel inactivation".
 
 ------------------
 ## System Requirements
@@ -20,6 +21,8 @@ The computational power needed to run the MATLAB and Python code should be well 
     * 8gb of RAM 
     * processor with 4 cores of 4.00+GHz 
 
+The run time of software installation and code running is negligeable (~ few seconds). 
+
 **Software Requirements**
 Python v3 and MATLAB R2024a can be installed on machines running Windows 10 or 11, macOS or Linux. The latest version of Python can be downloaded from [python.org](python.org) which provides installers for the operating systems mentioned above. MATLAB software requires a paid license or subscription to be used. More details [here](https://uk.mathworks.com/products/matlab.html).
 
@@ -27,11 +30,11 @@ Python v3 and MATLAB R2024a can be installed on machines running Windows 10 or 1
 ## Folder Structure
 The following folders are included in this repository:
 
-**ASAP5**: Analysis of ASAP5 voltage sensor outputs.
+**ASAP5**: Analysis of ASAP5 voltage sensor fluoresence transients that are evoked by electrical stimulations or spontaenous.
 
-**GRAB-ACh**: Measure fluorescence changes in GRAB sensor images. 
+**GRAB-ACh**: Analysis of GRAB-ACh sensor fluoresence transients evoked by electrical stimulations. 
 
-**jGCaMP8m**: Analysis of jGCaMP8m calcium sensor outputs.
+**jGCaMP8m**: Analysis of GRAB-ACh jGCaMP8m sensor fluoresence transients evoked by electrical stimulations.
 
 ------------------
 ## License and Citation
