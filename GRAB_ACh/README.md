@@ -1,4 +1,4 @@
-### GRAB ACh sensor imaging in ex vivo mouse brain slices
+### GRAB ACh sensor imaging in *ex vivo* mouse brain slices
 
 
 ## Installation
