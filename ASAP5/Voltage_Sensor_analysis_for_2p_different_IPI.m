@@ -1,7 +1,6 @@
 %%%%%%%%%%%%%%%%%%% Imaging data analysis %%%%%%%%%%%%%%%%%%%%
 % !! Remember to modify parameters depending on acquisition protocol and stim protocol!!
 % (exposure / time of stim / etc..)
-% Lucille Duquenoy 09/09/24 - added different timings for 2p 
 
 
 % Before using the code you need to create two tables as following:
@@ -204,7 +203,7 @@ end
 
 
 
-%to copy paste in Excel:
+%out put to copy paste in Excel:
 
 total_AUC_all;
 deltaF_over_F0_percent_all;
@@ -221,6 +220,4 @@ TO_EXPORT_stim_traces=cat(1,first_stim_trace_all,zeros(1,total_number_of_stims),
 TO_EXPORT_stim_AUCs=cat(1,first_stim_AUC_all,second_stim_AUC_all);
 TO_EXPORT_spike_abs_rebas_height_AUC_F0=cat(1,SPIKE_absolute_heigth_all,zeros(1,total_number_of_stims),SPIKE_rebaselined_heigth_all,zeros(1,total_number_of_stims),SPIKE_AUC_all,zeros(1,total_number_of_stims),SPIKE_F0_all);
 
-% 
-% 
-% 
+ 
